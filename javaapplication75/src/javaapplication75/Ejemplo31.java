@@ -19,7 +19,8 @@ public class Ejemplo31 {
         Scanner entrada = new Scanner(System.in);
         Random aleatorios = new Random();
         int[] datos = new int[6];
-        String[] rangos = {"0-8", "8.1-12", "12.1-16", "16.1-19", "19.1-20", "20.1 - adelante"};
+        String[] rangos = {"0-8", "8.1-12", "12.1-16", "16.1-19", 
+            "19.1-20", "20.1 - adelante"};
         boolean bandera = true;
         while (bandera == true) {
             System.out.println("Ingrese una nota");
@@ -49,9 +50,12 @@ public class Ejemplo31 {
                     }
                 }
             }
-            entrada.nextLine();
+            
+            entrada.nextLine(); //Limpiamos buffer
+            //preguntamos al usuario si quisere seguir ingresando notas
             System.out.println("Quiere seguir ingresando notas");
             String notas = entrada.nextLine();
+            //validamos la nota para poder seguir con el ciclo
             if(notas.equalsIgnoreCase("si")){
                 bandera = true;
             }else{
